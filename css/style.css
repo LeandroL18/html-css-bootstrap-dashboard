@@ -4,3 +4,123 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Stili nav_bar */
+#nav_bar{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    background-color: rgb(243, 243, 243);
+}
+#container_white{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+#logo{
+    width: 180px;
+    background-image: url(../img/logo.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding: 20px 30px 20px 15px;
+}
+.search{
+    flex-grow: 1;
+    background-color: rgb(202, 202, 202);
+    border-radius: 5px;
+    border: none;
+}
+.fa-magnifying-glass{
+    align-self: center;
+    margin-left: 10px;
+}
+.fa-bell{
+    color:  #ffae00;
+}
+
+#nav_bar div:last-child{
+    background-color: white;
+}
+#nav_bar div:last-child .fa-solid, .fa-list-ul{
+    margin: 10.5px 15px;
+}
+
+/* Stili wrapper_up */
+#wrapper_up{
+    margin-top: 60px;
+    height: calc(100vh - 60px );
+    display: flex;
+}
+
+/* Stili sidebar */
+#sidebar{
+    width: 130px;
+    height:100%;
+    background-image: url(../img/sidebar-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(16, 18, 30);
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#sidebar a{
+    display: block;
+}
+.fa-house{
+    margin-right: 10px;
+}
+.fa-chart-simple{
+    margin-right: 13px;
+}
+.fa-signal{
+    margin-right: 7px;
+}
+.fa-gear{
+    margin-right: 10px;
+}
+
+/* Stili main_player */
+#container_centrale{
+    flex-grow: 1;
+    background-color:  rgb(243, 243, 243);
+    padding: 0 5px 0 20px;
+    overflow-y: auto;
+}
+
+
+
+
+/* Media query */
+@media all and (max-width:768px){
+    .fa-list-ul, .fa-circle-question, .fa-ellipsis-vertical{
+        display: none;
+    }
+    #logo{
+        background-image: url(../img/mobile-logo.png);
+        background-size:100% ;
+        background-position: 0;
+        width: 50px;
+    }
+    #sidebar{
+        width: 80px;
+    }
+}
