@@ -13,17 +13,30 @@
 
 a{
     text-decoration: none;
-    color: white;
 }
 
+.color_black{
+    color: black;
+}
+
+.bg_gray{
+    background-color: rgb(243, 243, 243);
+}
+
+.bg_yellow{
+    background-color: #ffae00;
+}
+.bg_green{
+    background-color: green;
+}
+.bg_white{
+    background-color: white;
+}
 
 /* Stili nav_bar */
 #nav_bar{
     width: 100%;
     height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
     padding: 10px 0;
     background-color: rgb(243, 243, 243);
 }
@@ -54,13 +67,20 @@ a{
 .fa-bell{
     color:  #ffae00;
 }
-
 #nav_bar div:last-child{
     background-color: white;
 }
 #nav_bar div:last-child .fa-solid, .fa-list-ul{
-    margin: 10.5px 15px;
+    margin: 0 15px;
 }
+#nav_bar div:last-child div{
+    display: inline-block;
+}
+#nav_bar a{
+    color: black;
+}
+
+
 
 /* Stili wrapper_up */
 #wrapper_up{
@@ -84,6 +104,7 @@ a{
 }
 #sidebar a{
     display: block;
+    color: white;
 }
 .fa-house{
     margin-right: 10px;
@@ -102,9 +123,91 @@ a{
 #container_centrale{
     flex-grow: 1;
     background-color:  rgb(243, 243, 243);
-    padding: 0 5px 0 20px;
     overflow-y: auto;
 }
+
+/* Stili controller  */
+#controller{
+    width: 100%;
+    background-color: rgb(0, 115, 255);
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+#new_student{
+    color: white;
+}
+.fa-plus{
+    margin-left: 8px;
+    font-size: 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 8px;
+}
+#controller a{
+    color: white;
+    font-size: 10px;
+    background-color: rgb(0, 72, 255);
+    border-radius: 20px;
+    padding: 0 5px;
+    margin-right: 2px;
+}
+#controller h3{
+    display: inline-block;
+    margin-right: 10px;
+}
+#svuota{
+    background-color: #ffae00;
+    border: #ffae00;
+}
+
+/* Stili offcanvas */
+#offcanvasRight{
+    width: 50%;
+}
+
+#container_tabelle{
+    width: 97%;
+}
+
+/* Stili tabella */
+#tabella{
+    width: 100%;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.fa-code{
+    font-size: 12px;
+    color: white;
+    background-color: #ff7300;
+    border-radius: 50%;
+    padding: 5px 4px;
+}
+.fa-pencil, .fa-trash{
+    color: rgb(106, 106, 106);
+    border: 1px solid rgb(106, 106, 106);
+    padding: 5px;
+    border-radius: 4px;
+}
+.fa-trash{
+    padding: 5px 6px;
+}
+
+/* Stili FAQ */
+#FAQ{
+    width: 100%;
+    margin-left:  10px;
+}
+
+
+/* Stili Todo */
+.border_check{
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    margin: 0;
+}
+
 
 
 
@@ -121,6 +224,18 @@ a{
         width: 50px;
     }
     #sidebar{
-        width: 80px;
+        width: 60px;
+    }
+    #sidebar span{
+        display: none;
+    }
+    #offcanvasRight{
+        width: 100%;
+    }
+    #tabella{
+        width: 96.5%;
+    }
+    #FAQ{
+        width: 95.5%;
     }
 }

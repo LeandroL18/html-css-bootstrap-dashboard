@@ -14,10 +14,9 @@
     <body>
         <header>
             <!-- nav_bar -->
-            <div id="nav_bar" class="container-fluid">
+            <div id="nav_bar" class="container-fluid fixed-top">
                 <div id="container_white">
-                    <div id="logo">
-                    </div>
+                    <div id="logo"></div>
 
                     <div class="search">
                         <form class="d-flex">
@@ -25,36 +24,412 @@
                             <input class="form-control me-2 search" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
                         </form>
                     </div>
-
+        
                     <div>
-                        <i class="fas fa-list-ul"></i>
-                        <i class="fa-solid fa-circle-question"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                        <i class="fa-solid fa-bell"></i>
+                        <a href="#"><i class="fas fa-list-ul"></i></a>
+
+                        <a href="#">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+
+                        <div class="nav-item dropdown ">
+                            <a class="nav-link" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bell"></i>
+                            </a>
+                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                              <li><a class="dropdown-item" href="#">Profilo</a></li>
+                              <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                              <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div> 
                     </div>
                 </div>
             </div>
         </header>
 
+        <!-- Main -->
         <main>
             <div id="wrapper_up" >
-
+                <!-- Sidebar -->
                 <div id="sidebar">
                     <div>   
-                        <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+                        <a href="#"><i class="fa-solid fa-house"></i>
+                            <span>Home</span>
+                        </a>
                     
-                        <a href="#"><i class="fa-solid fa-chart-simple"></i> Stats</a>
+                        <a href="#"><i class="fa-solid fa-chart-simple"></i> 
+                            <span>Stats</span>
+                        </a>
                     
-                        <a href="#"><i class="fa-solid fa-signal"></i> Signals</a>  
+                        <a href="#"><i class="fa-solid fa-signal"></i>
+                            <span>Signals</span>
+                        </a>  
                     </div>
 
                     <div>
-                        <a href="#"><i class="fa-solid fa-gear"></i> Admin</a>
+                        <a href="#"><i class="fa-solid fa-gear"></i>
+                            <span>Admin</span> 
+                        </a>
+                    </div>
+                </div>
+                
+                <div id="container_centrale">
+                    <!-- Controller -->
+                    <div id="controller" class="row">
+                        <!-- prima colonna controller-->
+                        <div class="col-5">
+                            <h3>Boolean</h3>
+                            <a href="#">Piano blaze</a>
+                            <nav class="nav">
+                                <a class="nav-link active" aria-current="page" href="#">Boolean mobile app</a>
+                                <a class="nav-link" href="#">Boolean web app</a>
+                                <a class="nav-link" href="#">Boolean blog app</a>
+                            </nav>
+                        </div>
+                        <!-- seconda colonna controller-->
+                        <div class="col-4">
+                            <h6>Studenti online negli ultimi 30 minuti</h6>
+                            <span>125</span>
+                        </div>
+                        <!-- terza colonna controller-->
+                        <div class="col-3">
+                            <button id="new_student" class="btn" type="button"  data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                Nuovo studente
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <div class="offcanvas offcanvas-end"  id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                <!-- Interno offcanvas -->
+                                <div class="offcanvas-header color_black">
+                                    <h5 id="offcanvasRightLabel">
+                                        Inserisci un nuovo studente
+                                    </h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body color_black">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Nome</label>
+                                            <input type="nome" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Cognome</label>
+                                            <input type="cognome" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                          <label class="form-label">Email</label>
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon1">@</span>
+                                                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>  
+                                        <div class="col-md-6">
+                                            <label class="form-label">Password</label>
+                                            <input type="password" class="form-control">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="form-label">Indirizzo Email</label>
+                                              <div class="input-group mb-3">
+                                                  <span class="input-group-text" id="basic-addon1">@</span>
+                                                  <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                              </div>
+                                          </div>  
+                                          <div class="col-md-6">
+                                              <label class="form-label">Password</label>
+                                              <input type="password" class="form-control">
+                                          </div>
+
+                                          <div class="col-12">
+                                               <label for="inputAddress" class="form-label">Indirizzo</label>
+                                               <input type="text" class="form-control">
+                                          </div>
+
+                                          <div class="col-md-6">
+                                               <label class="form-label">Citt&agrave;</label>
+                                               <input type="text" class="form-control">
+                                          </div>
+                                          <div class="col-md-4">
+                                                <label class="form-label">Stato</label>
+                                                <select class="form-select">
+                                                <option selected>Scegli...</option>
+                                                <option>...</option>
+                                                </select>
+                                          </div>
+                                          <div class="col-md-2">
+                                                <label class="form-label">CAP</label>
+                                                <input type="text" class="form-control">
+                                          </div>
+
+                                          <div class="col-12">
+                                            <div class="input-group">
+                                                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                              </div> 
+                                          </div>
+
+                                          <div class="col-12">
+                                               <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label" for="gridCheck">
+                                                        Seleziona per proseguire
+                                                    </label>
+                                                </div>
+                                          </div>
+
+                                          <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Salva</button>
+                                            <button id="svuota" type="submit" class="btn btn-primary">Svuota</button>
+                                          </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
+                    <div id="container_tabelle">
+                        <div class="row">
+                            <div class="col-12 col-md-7 ">
+                                <!-- Tabella -->
+                                <table id="tabella" class="table bg_white">
+                                    <tbody>
+                                    <tr class="bg_gray">
+                                        <td colspan="5">
+                                            <h2>Prossime classi</h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nome</td>
+                                        <td>Data inizio</td>
+                                        <td>ROI</td>
+                                        <td>Stato</td>
+                                        <td>Azioni</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fa-solid fa-code"></i>
+                                            Classe 75
+                                        </td>
+                                        <td>15 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td class="label bg_green">Done</td>
+                                        <td> 
+                                            <a href="#">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fa-solid fa-code"></i>
+                                            Classe 76
+                                        </td>
+                                        <td>16 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td class="label bg_green">Done</td>
+                                        <td> 
+                                            <a href="#">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fa-solid fa-code"></i>
+                                            Classe 77
+                                        </td>
+                                        <td>17 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td class="label bg_yellow">Process</td>
+                                        <td> 
+                                            <a href="#">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fa-solid fa-code"></i>
+                                            Classe 78
+                                        </td>
+                                        <td>18 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td class="label bg_green">Done</td>
+                                        <td> 
+                                            <a href="#">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fa-solid fa-code"></i>
+                                            Classe 79
+                                        </td>
+                                        <td>19 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td class="label bg_red">Failed</td>
+                                        <td> 
+                                            <a href="#">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fa-solid fa-code"></i>
+                                            Classe 80
+                                        </td>
+                                        <td>20 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td class="label bg_green">Done</td>
+                                        <td> 
+                                            <a href="#">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fa-solid fa-code"></i>
+                                            Classe 81
+                                        </td>
+                                        <td>21 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td class="label bg_red">Failed</td>
+                                        <td> 
+                                            <a href="#">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fa-solid fa-code"></i>
+                                            Classe 82
+                                        </td>
+                                        <td>22 Feb 2021</td>
+                                        <td>20%</td>
+                                        <td class="label bg_green">Done</td>
+                                        <td> 
+                                            <a href="#">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
 
-                <div id="container_centrale"></div>
+                                <!-- FAQ -->
+                                <div class="accordion" id="FAQ">
+                                    <div class="accordion-item bg_gray">
+                                        <h2>F.A.Q</h2>
+                                    </div>
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Come aggiungere un nuovo studente?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                        Clicca sul + in alto nella sezione blu!
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Come posso accedere alle informazioni del mio account?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                        Clicca sull&apos;icona della campanella!
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Posso usare questa dashboard da mobile
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                        Certo che si!
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-12 col-md-5">
+                                <!-- Todo -->
+                                <table id="tabella" class="table bg_white">
+                                    <tbody>
+                                    <tr class="bg_gray">
+                                        <td>
+                                            <h2>Todo</h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check border_check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label">
+                                                Kickoff nuove classi
+                                                </label>
+                                            </div>
+                                            <div class="form-check border_check">
+                                                <input class="form-check-input" type="checkbox" value="" >
+                                                <label class="form-check-label">
+                                                    Lezione su Bootstrap 5 in classe #75
+                                                </label>
+                                            </div>
+                                            <div class="form-check border_check">
+                                                <input class="form-check-input" type="checkbox" value="" >
+                                                <label class="form-check-label">
+                                                    Controllare username github studenti
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
