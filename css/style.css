@@ -14,7 +14,6 @@
 a{
     text-decoration: none;
 }
-
 .color_black{
     color: black;
 }
@@ -22,7 +21,6 @@ a{
 .bg_gray{
     background-color: rgb(243, 243, 243);
 }
-
 .bg_yellow{
     background-color: #ffae00;
 }
@@ -32,6 +30,18 @@ a{
 .bg_white{
     background-color: white;
 }
+.border_radius{
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+}
+hr{
+    margin: 5px 0px 2px 0px;
+    width: 100%;
+}
+.padding{
+    padding: 10px;
+}
+
 
 /* Stili nav_bar */
 #nav_bar{
@@ -81,13 +91,13 @@ a{
 }
 
 
-
 /* Stili wrapper_up */
 #wrapper_up{
     margin-top: 60px;
     height: calc(100vh - 60px );
     display: flex;
 }
+
 
 /* Stili sidebar */
 #sidebar{
@@ -119,12 +129,14 @@ a{
     margin-right: 10px;
 }
 
+
 /* Stili main_player */
 #container_centrale{
     flex-grow: 1;
     background-color:  rgb(243, 243, 243);
     overflow-y: auto;
 }
+
 
 /* Stili controller  */
 #controller{
@@ -161,21 +173,16 @@ a{
     border: #ffae00;
 }
 
+
 /* Stili offcanvas */
 #offcanvasRight{
     width: 50%;
 }
 
-#container_tabelle{
-    width: 97%;
-}
 
 /* Stili tabella */
 #tabella{
     width: 100%;
-    border: 1px solid rgb(206, 206, 206);
-    border-radius: 5px;
-    margin-left: 10px;
 }
 .fa-code{
     font-size: 12px;
@@ -194,20 +201,41 @@ a{
     padding: 5px 6px;
 }
 
+
 /* Stili FAQ */
 #FAQ{
     width: 100%;
-    margin-left:  10px;
+    margin-bottom: 18px;
 }
 
 
 /* Stili Todo */
-.border_check{
-    border: 1px solid rgb(206, 206, 206);
-    border-radius: 5px;
+.check{
     margin: 0;
 }
 
+
+/* Stili container grafico */
+#card_grafico{
+    width: 100%;
+}
+#card_grafico img{
+    width: 100%;
+}
+#card_grafico span{
+    margin-left: 10px;
+}
+#card_grafico ul{
+    list-style-type: none;
+}
+#card_grafico li{
+    margin-left: -20px;
+    font-size: 11px;
+}
+#card_grafico hr{
+    margin: 5px 0px 2px -30px;
+    width: 105%;
+}
 
 
 
@@ -231,11 +259,5 @@ a{
     }
     #offcanvasRight{
         width: 100%;
-    }
-    #tabella{
-        width: 96.5%;
-    }
-    #FAQ{
-        width: 95.5%;
     }
 }
